@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vasconcelos"> 
+    <title>Inicio Sesión</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/tuzo_ico.ico ">
+    <link rel="stylesheet" href="../css/acceso.css">
+</head>
+<body>
+
+    <form action="../php/login.php" method="post">
+
+        <h1>Inicio de sesión</h1>
+
+        <label for="nombreUsuario">Usuario</label>
+        <input type="text" id="nombreUsuario" name="email">
+
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" name="password">
+        <div>
+            <p>Mostrar contraseña</p><input type="checkbox" id="mostrarContraseña" onclick="togglePassword()"> 
+        </div>
+
+        <div class="recordar">
+            <a href="#">
+                <p>Olvide mi contraseña</p> 
+            </a>
+        </div>
+        
+        <input type="submit" class="boton1" value="Iniciar">
+        <button type="button" class="boton2" onclick="window.location.href='index.html'">Regresar</button>
+
+    </form>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("contraseña");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>

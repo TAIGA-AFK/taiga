@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --menu-bg: #000080;
+    --menu-text: #F0FFFF;
+    --content-bg: #FFFFFF;
+    --content-text: #000000;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.menu-lateral {
+    width: 200px;
+    background-color: var(--menu-bg);
+    color: var(--menu-text);
+    padding: 1rem;
+}
+
+.menu-lateral ul {
+    list-style-type: none;
+}
+
+.menu-lateral li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.menu-lateral li:hover {
+    text-decoration: underline;
+}
+.regresar {
+    color: var(--menu-text);
+    text-decoration: none;
+}
+
+.regresar:hover {
+    text-decoration: underline;
+}
+
+.contenido {
+    flex-grow: 1;
+    background-color: var(--content-bg);
+    padding: 2rem;
+    color: var(--content-text);
+    border-radius: 1rem;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 0.5rem;
+    background-color: var(--menu-bg);
+    color: var(--menu-text);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--menu-text);
+    color: var(--menu-bg);
+}
+
+.buscar-usuario, .datos-usuario {
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.buscar-usuario label,
+.datos-usuario label {
+    margin-bottom: 0.5rem;
+}
+
+.buscar-usuario input,
+.datos-usuario input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--menu-bg);
+    color: var(--menu-text);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+

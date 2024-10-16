@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vasconcelos"> 
+    <title>Admin Tuzos</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/tuzo_ico.ico ">
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="menu-lateral">
+            <ul>
+                <li onclick="mostrarRegistro()">Registrar</li>
+                <li onclick="mostrarActualizar()">Actualizar</li>
+                <li>Eliminar</li>
+                <li onclick="mostrarUsuarios()">Usuarios</li>
+                <li><a href="sistema.html" class="regresar">Regresar</a></li>
+            </ul>
+        </nav>
+        <div class="contenido" id="registrar" style="display: none;">
+            <h2>Registro de Usuarios</h2>
+            <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido">
+
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo">
+
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña">
+                <input type="checkbox" onclick="togglePassword()"> Mostrar contraseña
+
+                <button type="submit" class="boton1">Registrar</button>
+            </form>
+        </div>
+        <div class="contenido" id="actualizar" style="display: none;">
+            <h2>Actualizar Usuario</h2>
+            <form>
+                <div class="buscar-usuario">
+                    <label for="usuario">Nombre del usuario a actualizar</label>
+                    <input type="text" id="usuario" name="usuario">
+                </div>
+                <div class="datos-usuario">
+                    <label for="nuevo-nombre">Nuevo Nombre</label>
+                    <input type="text" id="nuevo-nombre" name="nuevo-nombre">
+
+                    <label for="nuevo-apellido">Nuevo Apellido</label>
+                    <input type="text" id="nuevo-apellido" name="nuevo-apellido">
+
+                    <label for="nuevo-correo">Nuevo Correo Electrónico</label>
+                    <input type="email" id="nuevo-correo" name="nuevo-correo">
+
+                    <label for="nueva-contraseña">Nueva Contraseña</label>
+                    <input type="password" id="nueva-contraseña" name="nueva-contraseña">
+                    <input type="checkbox" onclick="toggleNewPassword()"> Mostrar
+
+                    <button type="submit" class="boton1">Actualizar Usuario</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="contenido" id="usuarios" style="display: none;">
+            <h2>Usuarios Registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo Electrónico</th>
+                        <th>Contraseña</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Juan</td>
+                        <td>Pérez</td>
+                        <td>juan.perez@example.com</td>
+                        <td>123456</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>María</td>
+                        <td>García</td>
+                        <td>maria.garcia@example.com</td>
+                        <td>abcdef</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pedro</td>
+                        <td>López</td>
+                        <td>pedro.lopez@example.com</td>
+                        <td>qwerty</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Laura</td>
+                        <td>Fernández</td>
+                        <td>laura.fernandez@example.com</td>
+                        <td>password</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Carlos</td>
+                        <td>Martínez</td>
+                        <td>carlos.martinez@example.com</td>
+                        <td>123abc</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function mostrarRegistro() {
+            document.getElementById("registrar").style.display = "block";
+            document.getElementById("actualizar").style.display = "none";
+            document.getElementById("usuarios").style.display = "none";
+        }
+
+        function mostrarActualizar() {
+            document.getElementById("registrar").style.display = "none";
+            document.getElementById("actualizar").style.display = "block";
+            document.getElementById("usuarios").style.display = "none";
+        }
+
+        function mostrarUsuarios() {
+            document.getElementById("registrar").style.display = "none";
+            document.getElementById("actualizar").style.display = "none";
+            document.getElementById("usuarios").style.display = "block";
+        }
+
+        // Mostrar el contenido de registro automáticamente al cargar la página
+        window.onload = function() {
+            mostrarRegistro();
+        };
+    </script>
+</body>
+</html>

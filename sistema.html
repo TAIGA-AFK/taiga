@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vasconcelos"> 
+    <title>Admin Tuzos</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/tuzo_ico.ico ">
+    <link rel="stylesheet" href="../css/sistema.css">
+</head>
+<body>
+    <header>
+        <div class="movimiento">Bienvenidos al sistema de administración Filial Tuzos Nanchital</div>
+    </header>   
+
+    <main class="contenedor sombreado">
+        <h2>Gestión de datos del filial</h2>
+        <div class="recuadros">
+            <div class="cuadro">
+                <h3>Registrar Usuarios</h3>
+                <p>Dar de alta a más administradores del sistema</p>
+                <button onclick="window.location.href='registro.html'">Administrar usuarios</button>
+
+            </div>
+            <div class="cuadro">
+                <h3>Administrar Jugadores</h3>
+                <p>Añadir, eliminar o actualizar datos de jugadores</p>
+                <button onclick="window.location.href='pagina2.html'">Añadir jugadores</button>
+            </div>
+            <div class="cuadro">
+                <h3>Estadisticas grupales</h3>
+                <p>Control del equipo, posiciones, alineaciones.</p>
+                <button onclick="window.location.href='pagina3.html'">Administrar</button>
+            </div>
+            <div class="cuadro">
+                <h3>Habilidades del jugador</h3>
+                <p>Registro y administración del perfil del jugador</p>
+                <button onclick="window.location.href='pagina4.html'">Administrar habilidades</button>
+            </div>
+            <div class="cuadro">
+                <h3>Registro de asistencias</h3>
+                <p>Asistencia a entrenamientos y partidos del filial</p>
+                <button onclick="window.location.href='asistencia.html'">Capturar asistencias</button>
+            </div>
+            <div class="cuadro">
+                <h3>Administración de pagos</h3>
+                <p>Gestión de mensualidades</p>
+                <button onclick="window.location.href='pagina6.html'">Capturar pagos</button>
+            </div>
+        </div>
+        <button class="cerrar-sesion" onclick="window.location.href='index.html'">Cerrar sesión</button>
+    </main>
+    <footer>
+        <p>Fútbol Club Filial Tuzos Nanchital | Copyright &copy; 2024</p>
+    </footer>
+</body>
+<script src="../js/getData.js"></script>
+</html>

@@ -1,0 +1,228 @@
+:root {
+    --blanco: #fff;
+    --primario: #000080;
+    --dorado: #F1C40F;
+    --secundario: #154360;
+    --secundario2: #0000CD;
+    --colorsubmenu: #F0FFFF;
+    --colorHover: #FFFAF0;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+h2{
+    font-size: 2rem;
+    color: var(--primario);
+    font-family: "Montserrat", sans-serif;
+
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+p{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+
+}   
+/*AQUÍ INICIA EL MENÚ DE NAVEGACIÓN CON EL LOGO*/
+nav{
+    background-color: var(--primario);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1000;
+}
+
+header .logo img{
+    height: 130px;
+    margin-left: 50px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu li{
+    position: relative;
+}
+
+.menu li a{
+    display: block;
+    font-weight: 700;
+    padding: 15px 20px;
+    color: var(--blanco);
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.menu li a:hover{
+    background-color: var(--secundario2);
+    color: var(--colorsubmenu);
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: var(--colorsubmenu);
+    z-index: 2000;
+    margin: 0;
+    padding: 0;
+    top: 100%;
+    left: 0;
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+.submenu li:hover{
+    background-color: var(--primario);
+    color: var(--colorsubmenu);
+}
+
+.submenu li a{
+    color: var(--secundario2);
+    display: block;
+    font-size: 1rem;
+    padding: 15px 15px 15px 20px;
+}
+
+/*AQUÍ INICIA LA PARTE DE DATOS DE VISION Y MISION*/
+.contenedor {
+    margin: 0 auto;
+    padding: 2rem;
+    border: #1C2833;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 1000px;
+    font-size: 1.2rem;
+}
+
+.sombreado {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1); 
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1); 
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1); 
+    border-radius: 1.5rem;
+}
+
+.filosofia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cuadro {
+    width: calc(50% - 20px); /* Dos cuadros por fila */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cuadro h3 {
+    font-size: 1.5rem;
+    color: var(--primario); /* Color azul para los títulos */
+    margin-bottom: 10px;
+}
+
+.cuadro p, .cuadro ul {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.cuadro ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cuadro ul li {
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.filosofia .cuadro:nth-child(3) {
+    width: calc(100% - 20px); /* Un cuadro centrado en la siguiente fila */
+}
+
+
+/*Aquí inicia mi Footer*/
+.piepagina{
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    border: #1C2833;
+    background-color: var(--primario);
+    box-shadow: 0px 10px 15px 15px rgba(112, 112, 112, 1); 
+    border-radius: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.izquierda, .centro, .derecha {
+    flex: 1;
+    text-align: center;
+}
+
+.derecha {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+
+.piepagina p {
+    color: var(--blanco);
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    /* color: var(--blanco);
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: 0; */
+}
+
+.iconos {
+    margin: 0.1rem;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.icono {
+    display: inline-block; 
+}
+
+.icono:hover {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
